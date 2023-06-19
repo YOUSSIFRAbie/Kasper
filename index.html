@@ -1,404 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kasper</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/localDef.css">
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="icon" href="./images/logo.png">
+    <title>Kasper</title>
 </head>
-<body>
-  <header class="header">
-    <div class="container">
-      <a href="#" class="logo">
-        <img src="images/logo.png" alt="">
-      </a>
-      <nav>
-        <i class="fas fa-bars toogle"></i>
-        <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#Services">Services</a></li>
-          <li><a href="#Portfolio">Portfolio</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Pricing">Pricing</a></li>
-          <li><a href="#Contact">Contact</a></li>
+<body class="select-none">
+    <header class="fixed w-screen text-white ">
+        <div class="container h-[72px] border-b border-white flex justify-between items-center">
+            <div class="h-[40px]">
+                <img src="./images/logo.png" alt="logo">
+            </div>
+            <div class="divide-y-1 flex items-center gap-4">
+                <i class="fas fa-bars fa-2x cursor-pointer md:hidden"></i>
+                <nav class="md:flex items-center gap-4 capitalize hidden ">
+                    <a class="inline-block active" href="#home">home</a>
+                    <a class="inline-block hover:text-main-a" href="#services">services</a>
+                    <a class="inline-block hover:text-main-a" href="#portofolio">portofolio</a>
+                    <a class="inline-block hover:text-main-a" href="#about">about</a>
+                    <a class="inline-block hover:text-main-a" href="#pricing">pricing</a>
+                    <a class="inline-block hover:text-main-a" href="#contact">contact</a>
+                </nav>
+                <i class="fas fa-search  cursor-pointer hover:text-main-a border-l border-white p-4"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="h-screen relative -z-10 bg-cover bg-[url('../images/landing.jpg')]">
+        <i class="fas fa-angle-left top-1/2 -translate-y-1/2 left-6 fa-2x text-white absolute"></i>
+        <i class="fas fa-angle-right top-1/2 -translate-y-1/2 right-6 fa-2x text-white absolute"></i>
+        <div class="w-full text-center md:text-left -z-10 absolute top-1/2 -translate-y-1/2 md:w-1/2 text-white p-16 md:py-8 md:pr-8 md:pl-20  bg-main-bg opacity-1/2">
+            <h1 class="text-xl md:text-3xl  capitalize mb-6">
+                hello world!
+                <br class="my-12 block">
+                we are kasper we make art.
+            </h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing 
+                elit. Cumque minus quaerat esse sequi voluptate et quibusdam 
+                dolores odio consequuntur deserunt odio consequuntur deserunt
+                Lorem, ipsum dolor sit ame consequuntur deserunt.
+            </p>
+        </div>
+        <div class="absolute left-1/2 -translate-x-1/2 bottom-10 space-x-4">
+            <span class="w-4 inline-block
+             h-4 rounded-full border border-white"></span>
+            <span class="bg-main-a inline-block w-4 h-4 rounded-full border border-white"></span>
+            <span class="w-4 inline-block h-4 rounded-full border border-white"></span>
+        </div>
+    </section>
+
+    <section id="services" class="py-32">
+        <div class="pb-2">
+            <div class="main-head">services</div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius repudiandae quas quos, animi dolorum facere enim autem 
+                voluptatibus consequatur necessitatibus.
+            </p>
+        </div>
+        <div class="container grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div class="text-center">
+                <i class="fa-solid fa-desktop fa-3x text-main-a m-4"></i>
+                <h4 class="text-lg my-4 font-extrabold capitalize tracking-wide">
+                    desktop development
+                </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                    elit. Similique totam accusamus alias consequuntur ea 
+                    maiores neque reiciendis dicta.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <i class="fa-sharp fa-solid fa-gears fa-3x text-main-a m-4"></i>
+                <h4 class="text-lg my-4 font-extrabold capitalize tracking-wide">
+                    app development
+                </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                    elit. Similique totam accusamus alias consequuntur ea 
+                    maiores neque reiciendis dicta.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <i class="fa-solid fa-pen-ruler fa-3x text-main-a m-4"></i>
+                <h4 class="text-lg my-4 font-extrabold capitalize tracking-wide">
+                    graphic designe
+                </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                    elit. Similique totam accusamus alias consequuntur ea 
+                    maiores neque reiciendis dicta.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <i class="fas fa-code fa-3x text-main-a m-4"></i>
+                <h4 class="text-lg my-4 font-extrabold capitalize tracking-wide">
+                    web development
+                </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                    elit. Similique totam accusamus alias consequuntur ea 
+                    maiores neque reiciendis dicta.
+                </p>
+            </div>
+        </div>
+        <div class="relative h-[80vh] overflow-hidden mt-16">
+            <img src="./images/design-features.jpg" alt="design-features" class="w-full h-full">
+            <img src="./images/mobile.png" alt="mobile" class="absolute hidden lg:block left-16 -bottom-14">
+            <div class="w-full bg-main-bg absolute top-1/2 -translate-y-1/2 right-0 text-white lg:w-1/2 p-16">
+                <h3 class="text-xl md:text-3xl capitalize tracking-wider mb-8">our designe comes with:</h3>
+                <div class="my-4">
+                    <i class="fas fa-mobile inline-block mr-2"></i>
+                    <span class="capitalize">responsive design</span>
+                </div>
+
+                <div class="my-4">
+                    <i class="fa-brands fa-sketch inline-block mr-2"></i>
+                    <span class="capitalize">modern and clean design</span>
+                </div>
+
+                <div class="my-4">
+                    <i class="fas fa-code inline-block mr-2"></i>
+                    <span class="capitalize">clean code</span>
+                </div>
+
+                <div class="my-4">
+                    <i class="fa-brands fa-chrome inline-block mr-2"></i>
+                    <span class="capitalize">browser friendly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portofolio" class="text-center py-32">
+        <div class="pb-2">
+            <div class="main-head">portofolio</div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius repudiandae quas quos, animi dolorum facere enim autem 
+                voluptatibus consequatur necessitatibus.
+            </p>
+        </div>
+        <ul class="flex py-8 capitalize justify-center text-center font-bold">
+            <li class="cursor-pointer text-white p-2 bg-main-a">all</li>
+            <li class="cursor-pointer hover:text-white hover:bg-main-a p-2">photo</li>
+            <li class="cursor-pointer hover:text-white hover:bg-main-a p-2">app</li>
+            <li class="cursor-pointer hover:text-white hover:bg-main-a p-2">web</li>
+            <li class="cursor-pointer hover:text-white hover:bg-main-a p-2">print</li>
         </ul>
-        <div class="form">
-          <i class="fas fa-search"></i>
+        <div class="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            
+            <div class="group relative overflow-hidden">
+                <div class="text-center transition-all top-[150%] duration-500 w-3/4 p-6 bg-white absolute group-hover:top-1/2 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2">
+                    <h5 class="text-main-a capitalize">project name</h5>
+                    <p>Project descreption</p>
+                </div>
+                <img src="./images/shuffle/shuffle-01.jpg" alt="portofolio image">
+            </div>
+            <div class="group relative overflow-hidden">
+                <div class="text-center transition-all top-[150%] duration-500 w-3/4 p-6 bg-white absolute group-hover:top-1/2 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2">
+                    <h5 class="text-main-a capitalize">project name</h5>
+                    <p>Project descreption</p>
+                </div>
+                <img src="./images/shuffle/shuffle-02.jpg" alt="portofolio image">
+            </div>
+            <div class="group relative overflow-hidden">
+                <div class="text-center transition-all top-[150%] duration-500 w-3/4 p-6 bg-white absolute group-hover:top-1/2 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2">
+                    <h5 class="text-main-a capitalize">project name</h5>
+                    <p>Project descreption</p>
+                </div>
+                <img src="./images/shuffle/shuffle-03.jpg" alt="portofolio image">
+            </div>
+            <div class="group relative overflow-hidden">
+                <div class="text-center transition-all top-[150%] duration-500 w-3/4 p-6 bg-white absolute group-hover:top-1/2 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2">
+                    <h5 class="text-main-a capitalize">project name</h5>
+                    <p>Project descreption</p>
+                </div>
+                <img src="./images/shuffle/shuffle-04.jpg" alt="portofolio image">
+            </div>
+            <div class="group relative overflow-hidden">
+                <div class="text-center transition-all top-[150%] duration-500 w-3/4 p-6 bg-white absolute group-hover:top-1/2 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2">
+                    <h5 class="text-main-a capitalize">project name</h5>
+                    <p>Project descreption</p>
+                </div>
+                <img src="./images/shuffle/shuffle-05.jpg" alt="portofolio image">
+            </div>
+            <div class="group relative overflow-hidden">
+                <div class="text-center transition-all top-[150%] duration-500 w-3/4 p-6 bg-white absolute group-hover:top-1/2 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2">
+                    <h5 class="text-main-a capitalize">project name</h5>
+                    <p>Project descreption</p>
+                </div>
+                <img src="./images/shuffle/shuffle-06.jpg" alt="portofolio image">
+            </div>
+            <div class="group relative overflow-hidden">
+                <div class="text-center transition-all top-[150%] duration-500 w-3/4 p-6 bg-white absolute group-hover:top-1/2 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2">
+                    <h5 class="text-main-a capitalize">project name</h5>
+                    <p>Project descreption</p>
+                </div>
+                <img src="./images/shuffle/shuffle-07.jpg" alt="portofolio image">
+            </div>
+            <div class="group relative overflow-hidden">
+                <div class="text-center transition-all top-[150%] duration-500 w-3/4 p-6 bg-white absolute group-hover:top-1/2 group-hover:-translate-y-1/2 left-1/2 -translate-x-1/2">
+                    <h5 class="text-main-a capitalize">project name</h5>
+                    <p>Project descreption</p>
+                </div>
+                <img src="./images/shuffle/shuffle-08.jpg" alt="portofolio image">
+            </div>
+                
         </div>
-      </nav>
-    </div>
-  </header>
-  <div class="landing">
-    <div class="overlay">
-      <div class="text">
-      <div class="content">
-        <h2>
-          Hello World!
-          <br />
-          we are Kasper we make art.
-        </h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, totam in voluptas itaque aspernatur porro qui, officia saepe sapiente reprehenderit optio assumenda nihil provident neque illo consequuntur esse doloribus magnam?
-        </p>
-      </div>
-    </div>
-    </div>
-    <i class="fas fa-angle-left change-back fa-2x"></i>
-    <i class="fas fa-angle-right change-back fa-2x"></i>
-    <ul class="bullets">
-      <li></li>
-      <li class="active"></li>
-      <li></li>
-    </ul>
-  </div>
-  <div class="services" id="Services">
-    <div class="main-heading">
-      <h2>SERVICES</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, nulla delectus. Voluptates, quod ut nesciunt debitis dolore quos optio vel provident iusto, asperiores impedit hic aut quia doloremque aspernatur sequi?</p>
-    </div>
-    <div class="container">
-      <div class="srv-box">
-        <i class="fa-solid fa-desktop fa-3x"></i>
-        <div class="text">
-          <h3>Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut ducimus magnam laudantium iusto quisquam facere atque exercitationem eaque?</p>
+        <div class="main-btn m-12">more</div>
+        <div class="relative">
+            <div class="absolute text-white text-center p-8 bg-main-bg w-full left-0 top-1/2 -translate-y-1/2">
+                <h4 class="text-lg md:text-xl capitalize tracking-wider">
+                    super awesome veideo here.
+                </h4>
+                <p class="my-6">It's all you need.</p>
+                <div class="bg-black capitalize px-4 py-2 font-bold inline-block">see more</div>
+            </div>
+            <video src="./images/awesome-video.mp4" class="w-full" autoplay muted loop></video>
         </div>
-      </div>
-      <div class="srv-box">
-        <i class="fa-sharp fa-solid fa-gears fa-3x"></i>
-        <div class="text">
-          <h3>Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut ducimus magnam laudantium iusto quisquam facere atque exercitationem eaque?</p>
+    </section>
+
+    <section id="about" class="py-32">
+        <div class="pb-2">
+            <div class="main-head">about us</div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius repudiandae quas quos, animi dolorum facere enim autem 
+                voluptatibus consequatur necessitatibus.
+            </p>
         </div>
-      </div>
-      <div class="srv-box">
-        <i class="fa-solid fa-pen-ruler fa-3x"></i>
-        <div class="text">
-          <h3>Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut ducimus magnam laudantium iusto quisquam facere atque exercitationem eaque?</p>
+        <div class="h-screen hidden lg:block overflow-hidden relative">
+            <img src="./images/about.png" alt="about" class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-full">
         </div>
-      </div>
-      <div class="srv-box">
-        <i class="fa-solid fa-camera fa-3x"></i>
-        <div class="text">
-          <h3>Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ut ducimus magnam laudantium iusto quisquam facere atque exercitationem eaque?</p>
+        <div class="py-12 bg-[url('../images/stats.png')]">
+            <div class="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div class="text-center p-8 bg-main-bg text-white capitalize">
+                    <i class="fas fa-mug-hot p-2 rounded-full bg-black"></i>
+                    <h3 class="text-2xl my-4 font-extrabold">1236</h3>
+                    <p>coffe drinks</p>
+                </div>
+
+                <div class="text-center p-8 bg-main-bg text-white capitalize">
+                    <i class="fas fa-folder p-2 rounded-full bg-black"></i>
+                    <h3 class="text-2xl my-4 font-extrabold">256</h3>
+                    <p>completed projects</p>
+                </div>
+
+                <div class="text-center p-8 bg-main-bg text-white capitalize">
+                    <i class="far fa-envelope p-2 rounded-full bg-black"></i>
+                    <h3 class="text-2xl my-4 font-extrabold">1743</h3>
+                    <p>mail send</p>
+                </div>
+    
+                <div class="text-center p-8 bg-main-bg text-white capitalize">
+                    <i class="fas fa-trophy p-2 rounded-full bg-black"></i>
+                    <h3 class="text-2xl my-4 font-extrabold">17</h3>
+                    <p>awards</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="design">
-    <div class="image">
-      <img src="images/mobile.png">
-    </div>
-    <div class="text">
-      <h2>Our design comes with....</h2>
-      <ul>
-        <li>responsive design</li>
-        <li>modern and clean design</li>
-        <li>clean code</li>
-        <li>Browser friendly</li>
-      </ul>
-    </div>
-  </div>
-  <div class="portfolio" id="Portfolio">
-    <div class="container">
-      <div class="main-heading">
-        <h2>portfolio</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, nulla delectus. Voluptates, quod ut nesciunt debitis dolore quos optio vel provident iusto, asperiores impedit hic aut quia doloremque aspernatur sequi?</p>
-      </div>
-      <ul class="shuffle">
-        <li class="active">all</li>
-        <li>photo</li>
-        <li>app</li>
-        <li>web</li>
-        <li>print</li>
-      </ul>
-    </div>
-    <div class="imags-folder">
-      <div class="box">
-        <img src="images/shuffle-01.jpg" alt="">
-        <div class="caption">
-          <h4>Awesome Image</h4>
-          <p>Photography</p>
+        <div class="container grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="relative">
+                <div class="py-4 mb-8 text-center">
+                    <h5 class="capitalize">testemonials</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Ipsa, aspernatur.
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <img src="./images/skills-01.jpg" alt="testemonials image" class="w-16 rounded-full">
+                        <div class="border-b">
+                            <p class="mb-6">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Reprehenderit, impedit ratione! Ipsa ullam sit repellendus 
+                                ducimus quo odit, quidem explicabo.
+                            </p>
+                            <h6 class="text-right text-sm capitalize">john doe, <span class="uppercase">ceo</span></h6>
+                        </div>
+                    </div>
+                    <div class="flex my-6 flex-col md:flex-row items-center gap-8">
+                        <img src="./images/skills-02.jpg" alt="testemonials image" class="w-16 rounded-full">
+                        <div class="border-b">
+                            <p class="mb-6">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Reprehenderit, impedit ratione! Ipsa ullam sit repellendus 
+                                ducimus quo odit, quidem explicabo.
+                            </p>
+                            <h6 class="text-right text-sm capitalize">john doe, <span class="uppercase">ceo</span></h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="absolute left-1/2 -translate-x-1/2 -bottom-4 space-x-4">
+                    <span class="w-4 inline-block h-4 rounded-full border border-black"></span>
+                    <span class="bg-main-a inline-block w-4 h-4 bg-main-a rounded-full border border-black"></span>
+                    <span class="w-4 inline-block h-4 rounded-full border border-black"></span>
+                </div>
+ 
+            </div>
+
+            <div>
+                <div class="py-4 text-center">
+                    <h5 class="capitalize">skills</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Ipsa, aspernatur.
+                    </p>
+                </div>
+                <div class="uppercase my-6">
+                    <h4 class="my-4 indent-2">adobe</h4>
+                    <div class="h-6 bg-[#f0f0f0]">
+                        <div class="w-[90%] relative h-full bg-main-a before:content-['90%']
+                        before:p-2 before:text-white before:bg-black before:absolute before:bottom-10 
+                        before:rounded before:left-full before:-translate-x-1/2 after:absolute
+                        after:content-[''] after:w-3 after:h-3 after:rotate-45 after:bg-black 
+                        after:left-full after:-translate-x-1/2 after:bottom-9"></div>                       
+                    </div>
+                </div>
+
+                <div class="uppercase my-6">
+                    <h4 class="my-4 indent-2">html / css</h4>
+                    <div class="h-6 bg-[#f0f0f0]">
+                        <div class="w-[85%] relative h-full bg-main-a before:content-['85%']
+                        before:p-2 before:text-white before:bg-black before:absolute before:bottom-10 
+                        before:rounded before:left-full before:-translate-x-1/2 after:absolute
+                        after:content-[''] after:w-3 after:h-3 after:rotate-45 after:bg-black 
+                        after:left-full after:-translate-x-1/2 after:bottom-9"></div>                       
+                    </div>
+                </div>
+
+                <div class="uppercase my-6">
+                    <h4 class="my-4 indent-2">javascript</h4>
+                    <div class="h-6 bg-[#f0f0f0]">
+                        <div class="w-[80%] relative h-full bg-main-a before:content-['80%']
+                        before:p-2 before:text-white before:bg-black before:absolute before:bottom-10 
+                        before:rounded before:left-full before:-translate-x-1/2 after:absolute
+                        after:content-[''] after:w-3 after:h-3 after:rotate-45 after:bg-black 
+                        after:left-full after:-translate-x-1/2 after:bottom-9"></div>                       
+                    </div>
+                </div>
+
+                <div class="uppercase my-6">
+                    <h4 class="my-4 indent-2">php</h4>
+                    <div class="h-6 bg-[#f0f0f0]">
+                        <div class="w-[75%] relative h-full bg-main-a before:content-['75%']
+                        before:p-2 before:text-white before:bg-black before:absolute before:bottom-10 
+                        before:rounded before:left-full before:-translate-x-1/2 after:absolute
+                        after:content-[''] after:w-3 after:h-3 after:rotate-45 after:bg-black 
+                        after:left-full after:-translate-x-1/2 after:bottom-9"></div>                       
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="box">
-        <img src="images/shuffle-02.jpg" alt="">
-        <div class="caption">
-          <h4>Awesome Image</h4>
-          <p>Photography</p>
+        <div class="my-8 p-8 bg-cover text-white relative bg-no-repeat text-lg bg-[url('../images/quote.jpg')] 
+        before:content-[''] before:w-full before:h-full before:absolute before:bg-main-bg before:left-0 before:top-0 
+        before:z-10 text-center">
+        <div class="relative z-20">
+            <i class="fa-sharp fa-2x fa-solid fa-quote-left"></i>
+            <p class="m-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Numquam, tenetur aperiam, odio debitis id distinctio 
+                dolores rerum deserunt quibusdam labore repellendus 
+                maxime voluptates dolo.
+            </p>
+            <i class="fa-sharp fa-2x fa-solid fa-quote-right"></i>
+            <h5 class="capitalize my-8">john doe. <span class="uppercase">seo</span></h5>
         </div>
-      </div>
-      <div class="box">
-        <img src="images/shuffle-03.jpg" alt="">
-        <div class="caption">
-          <h4>Awesome Image</h4>
-          <p>Photography</p>
         </div>
-      </div>
-      <div class="box">
-        <img src="images/shuffle-04.jpg" alt="">
-        <div class="caption">
-          <h4>Awesome Image</h4>
-          <p>Photography</p>
+
+    </section>
+
+    <section id="pricing" class="py-32">
+        <div class="pb-2">
+            <div class="main-head">pricing</div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius repudiandae quas quos, animi dolorum facere enim autem 
+                voluptatibus consequatur necessitatibus.
+            </p>
         </div>
-      </div>
-      <div class="box">
-        <img src="images/shuffle-05.jpg" alt="">
-        <div class="caption">
-          <h4>Awesome Image</h4>
-          <p>Photography</p>
+        <div class="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            
+            <div class="text-center bg-[#f0f0f0]">
+                <div class="py-4 border-t border-b border-main-a">
+                    <h5 class="uppercase my-4">basic</h5>
+                    <div>
+                        <div class="text-7xl my-6 relative font-bold before:content-['$'] before:absolute
+                        before:bottom-full before:right-full before:text-xl inline-block 
+                        after:content-['/MO'] after:top-full after:absolute after:left-full after:text-xl ">19</div>
+                    </div>
+                </div>
+                <div class="border-b border-main-a flex flex-col items-center">
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature one</div>
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature two</div>
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature three</div>
+                    <div class="inline-block p-3 capitalize">feature four</div>
+                </div>
+                <div class="my-6">
+                    <button class="px-4 py-2 inline-block text-main-a font-bold capitalize 
+                    border border-main-a text-main-a hover:text-white hover:bg-main-a">
+                        buy now
+                    </button>
+                </div>
+            </div>
+            <div class="text-center bg-[#f0f0f0]">
+                <div class="py-4 border-t border-b border-main-a">
+                    <h5 class="uppercase my-4">premiume</h5>
+                    <div>
+                        <div class="text-7xl my-6 relative font-bold before:content-['$'] before:absolute
+                        before:bottom-full before:right-full before:text-xl inline-block 
+                        after:content-['/MO'] after:top-full after:absolute after:left-full after:text-xl ">29</div>
+                    </div>
+                </div>
+                <div class="border-b border-main-a flex flex-col items-center">
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature one</div>
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature two</div>
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature three</div>
+                    <div class="inline-block p-3 capitalize">feature four</div>
+                </div>
+                <div class="my-6">
+                    <button class="px-4 py-2 inline-block text-main-a font-bold capitalize 
+                    border border-main-a text-main-a hover:text-white hover:bg-main-a">
+                        buy now
+                    </button>
+                </div>
+            </div>
+            <div class="text-center bg-[#f0f0f0]">
+                <div class="py-4 border-t border-b border-main-a">
+                    <h5 class="uppercase my-4">pro</h5>
+                    <div>
+                        <div class="text-7xl my-6 relative font-bold before:content-['$'] before:absolute
+                        before:bottom-full before:right-full before:text-xl inline-block 
+                        after:content-['/MO'] after:top-full after:absolute after:left-full after:text-xl ">39</div>
+                    </div>
+                </div>
+                <div class="border-b border-main-a flex flex-col items-center">
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature one</div>
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature two</div>
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature three</div>
+                    <div class="inline-block p-3 capitalize">feature four</div>
+                </div>
+                <div class="my-6">
+                    <button class="px-4 py-2 inline-block text-main-a font-bold capitalize 
+                    border border-main-a text-main-a hover:text-white hover:bg-main-a">
+                        buy now
+                    </button>
+                </div>
+            </div>
+            <div class="text-center bg-[#f0f0f0]">
+                <div class="py-4 border-t border-b border-main-a">
+                    <h5 class="uppercase my-4">platinum</h5>
+                    <div>
+                        <div class="text-7xl my-6 relative font-bold before:content-['$'] before:absolute
+                        before:bottom-full before:right-full before:text-xl inline-block 
+                        after:content-['/MO'] after:top-full after:absolute after:left-full after:text-xl ">49</div>
+                    </div>
+                </div>
+                <div class="border-b border-main-a flex flex-col items-center">
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature one</div>
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature two</div>
+                    <div class="inline-block border-b p-3 border-main-a capitalize">feature three</div>
+                    <div class="inline-block p-3 capitalize">feature four</div>
+                </div>
+                <div class="my-6">
+                    <button class="px-4 py-2 inline-block text-main-a font-bold capitalize 
+                    border border-main-a text-main-a hover:text-white hover:bg-main-a">
+                        buy now
+                    </button>
+                </div>
+            </div>
+
         </div>
-      </div>
-      <div class="box">
-        <img src="images/shuffle-06.jpg" alt="">
-        <div class="caption">
-          <h4>Awesome Image</h4>
-          <p>Photography</p>
+        <div class="text-center my-12">
+            <p class="capitalize">contact us if you have special request.</p>
+            <div class="main-btn m-12">contact us</div>
         </div>
-      </div>
-      <div class="box">
-        <img src="images/shuffle-07.jpg" alt="">
-        <div class="caption">
-          <h4>Awesome Image</h4>
-          <p>Photography</p>
+        <div class="py-16 text-white px-8 bg-[url('../images/subscribe.jpg')] bg-cover
+        grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8">
+            <form class="relative  text-right flex items-center justify-stretch lg:justify-center">
+                <input type="text" placeholder="Your Email" class="px-4 absolute left-0 top-0 w-full py-2 placeholder:indent-8 placeholder:text-white border border-white border-r-transparent bg-transparent"> 
+                <i class="fa-regular fa-envelope absolute -bottom-5 translate-y-1/2 left-4 lg:bottom-0 lg:top-1/2 lg:-translate-y-2/3"></i>
+                <div class="main-btn m-0 border absolute right-0 border-white top-0 border-l-transparent">subscribe</div>
+            </form>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio harum eius 
+                mollitia omnis! Quidem ipsa modi fuga corrupti distinctio, 
+                atque deleniti dignissimos laboriosam animi.
+            </p>
         </div>
-      </div>
-      <div class="box">
-        <img src="images/shuffle-08.jpg" alt="">
-        <div class="caption">
-          <h4>Awesome Image</h4>
-          <p>Photography</p>
+    </section>
+
+    <section id="contact" class="py-32">
+        <div class="pb-2">
+            <div class="main-head">contact us</div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius repudiandae quas quos, animi dolorum facere enim autem 
+                voluptatibus consequatur necessitatibus.
+            </p>
         </div>
-      </div>
-    </div>
-    <a href="" class="more">more</a>
-  </div>
-  <div class="video">
-    <video src="images/awesome-video.mp4" autoplay muted loop></video>
-    <div class="text">
-      <h2>Super Awesome Video Here.</h2>
-      <p>its all you need</p>
-      <button>See More</button>
-    </div>
-  </div>
-  <div class="about" id="About">
-    <div class="container">
-      <div class="main-heading">
-        <h2>about us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, nulla delectus. Voluptates, quod ut nesciunt debitis dolore quos optio vel provident iusto, asperiores impedit hic aut quia doloremque aspernatur sequi?</p>
-      </div>
-      <img src="images/about.png" alt="">
-    </div>
-  </div>
-  <div class="stats">
-    <div class="container">
-      <div class="box">
-        <i class="fas fa-mug-hot"></i>
-        <div class="num">1236</div>
-        <p>Coffee Drinks</p>
-      </div>
-      <div class="box">
-        <i class="far fa-folder"></i>
-        <div class="num">256</div>
-        <p>Completed projects</p>
-      </div>
-      <div class="box">
-        <i class="far fa-envelope"></i>
-        <div class="num">1743</div>
-        <p>Mail Send</p>
-      </div>
-      <div class="box">
-        <i class="fas fa-trophy"></i>
-        <div class="num">17</div>
-        <p>Awards</p>
-      </div>
-    </div>
-  </div>
-  <div class="our-skills">
-    <div class="container">
-      <div class="testemonials">
-        <h3>testemonials</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, perspiciatis quasi!</p>
-        <div class="box">
-          <img src="images/skills-01.jpg" alt="">
-          <div class="text">Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consect adipisicing elit. Accusantium, sit?
-            <p>John Doe, CEO</p>
-          </div>
+        <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="text-right md:col-span-2 flex flex-col items-center gap-6">
+                <input type="text" class="w-full p-4 border" placeholder="Your Name">
+                <input type="text" class="w-full p-4 border" placeholder="Your Email">
+                <textarea placeholder="Your Message" class="p-4 border w-full h-40 resize-none"></textarea>
+                <div class="main-btn mb-8 self-end">send message</div>
+            </div>
+            <div class="-order-10 text-center lg:text-left lg:order-5 lg:col-span-1">
+                <div class="mb-8">
+                    <h4 class="uppercase">phone numbers</h4>
+                    <p>+123-4567-890</p>
+                    <p>+123-4567-890</p>
+                </div>
+                <div>
+                    <h4 class="uppercase">addresses</h4>
+                    <p>Location 1</p>
+                    <p>Location 2</p>
+                    <address class="mt-2">
+                        <p>Awesome Address 17</p>
+                        <p>Lorem ipsum dolor</p>
+                        <p>123-4567-890</p>
+                        <p>USA</p>
+                    </address>
+                </div>
+            </div>
         </div>
-        <div class="box">
-          <img src="images/skills-02.jpg" alt="">
-          <div class="text">
-            Lorem ipsum dolor sit amet consectetur adipi ipsum dolor sit amet consect sicing elit. Accusantium, sit?
-            <p>John Doe, CEO</p>
-          </div>
+    </section>
+
+    <footer class="py-16 text-white px-8 text-center bg-[url('../images/subscribe.jpg')] bg-cover">
+        <div class="container flex flex-col gap-6 justify-between items-center">
+            <div class="h-[45px]">
+                <img src="./images/logo.png" alt="logo" class="max-h-full">
+            </div>
+            <div>
+                <h3 class="p-2 border-b border-white uppercase sm:text-lg md:text-xl lg:text-3xl">we are social</h3>
+                <div class="mt-4 flex justify-between">
+                    <i class="fa-brands fa-facebook-f fa-2x cursor-pointer hover:text-main-a"></i>
+                    <i class="fa-brands fa-twitter fa-2x cursor-pointer hover:text-main-a"></i>
+                    <i class="fa-brands fa-instagram fa-2x cursor-pointer hover:text-main-a"></i>
+                    <i class="fa-brands fa-linkedin-in fa-2x cursor-pointer hover:text-main-a"></i>
+                </div>
+            </div>
+            <p class="pb-4 capitalize">
+                &copy; 2023 
+                <a href="https://www.graphberry.com/item/kasper-one-page-creative-html-theme" 
+                target="_blank" class="text-main-a font-bold text-lg">kasper</a> - 
+                all right reserved.
+            </p>
         </div>
-        <ul class="bullits">
-          <li></li>
-          <li class="active"></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="skills">
-        <h3>scills</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, perspiciatis quasi!</p>
-        <div class="progress">
-          <h4>Adobe</h4>
-          <div class="prog">
-            <span style="width: 90%;" data-progress="90%"></span>
-          </div>
-          <h4>html / Css</h4>
-          <div class="prog">
-            <span style="width: 85%;" data-progress="85%"></span>
-          </div>
-          <h4>JavaScript</h4>
-          <div class="prog">
-            <span style="width: 80%;" data-progress="80%"></span>
-          </div>
-          <h4>php</h4>
-          <div class="prog">
-            <span style="width: 75%;" data-progress="75%"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="quote">
-    <div class="container">
-      <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quia voluptas recusandae atque laboriosam!</q>
-      <span>John Doe</span>
-    </div>
-  </div>
-  <div class="pricing" id="Pricing">
-    <div class="container">
-      <div class="main-heading">
-        <h2>pricing</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, nulla delectus. Voluptates, quod ut nesciunt debitis dolore quos optio vel provident iusto, asperiores impedit hic aut quia doloremque aspernatur sequi?</p>
-      </div>
-      <div class="plans">
-        <div class="plan">
-          <div class="head">
-            <h3>Basic</h3>
-            <span>19</span>
-          </div>
-          <ul>
-            <li>Lorem ipsum 1</li>
-            <li>Lorem ipsum 2</li>
-            <li>Lorem ipsum 3</li>
-            <li>Lorem ipsum 4</li>
-          </ul>
-          <div class="foot">
-            <a href="#">Buy Now</a>
-          </div>
-        </div>
-        <div class="plan">
-          <div class="head">
-            <h3>Premiume</h3>
-            <span>29</span>
-          </div>
-          <ul>
-            <li>Lorem ipsum 1</li>
-            <li>Lorem ipsum 2</li>
-            <li>Lorem ipsum 3</li>
-            <li>Lorem ipsum 4</li>
-          </ul>
-          <div class="foot">
-            <a href="#">Buy Now</a>
-          </div>
-        </div>
-        <div class="plan">
-          <div class="head">
-            <h3>Pro</h3>
-            <span>39</span>
-          </div>
-          <ul>
-            <li>Lorem ipsum 1</li>
-            <li>Lorem ipsum 2</li>
-            <li>Lorem ipsum 3</li>
-            <li>Lorem ipsum 4</li>
-          </ul>
-          <div class="foot">
-            <a href="#">Buy Now</a>
-          </div>
-        </div>
-        <div class="plan">
-          <div class="head">
-            <h3>Platinum</h3>
-            <span>49</span>
-          </div>
-          <ul>
-            <li>Lorem ipsum 1</li>
-            <li>Lorem ipsum 2</li>
-            <li>Lorem ipsum 3</li>
-            <li>Lorem ipsum 4</li>
-          </ul>
-          <div class="foot">
-            <a href="#">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <p class="contact-text">
-        contact us if you have special request.
-      </p>
-      <a href="#" class="contact-link">contact us</a>
-    </div>
-  </div>
-  <div class="subscribe">
-    <div class="container">
-      <form action="">
-        <i class="far fa-envelope fa-lg"></i>
-        <input type="email" name="mail" placeholder="Your Email">
-        <input type="submit" value="subscribe">
-      </form>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias error laboriosam iusto officiis tempore omnis molestiae laudantium nisi, minus dicta impedit odit natus delectus quis! Omnis cupiditate corporis ratione ipsum.</p>
-    </div>
-  </div>
-  <div class="contact" id="Contact">
-    <div class="container">
-      <div class="main-heading">
-        <h2>contact us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, nulla delectus. Voluptates, quod ut nesciunt debitis dolore quos optio vel provident iusto, asperiores impedit hic aut quia doloremque aspernatur sequi?</p>
-      </div>
-      <div class="content">
-        <form action="">
-          <input type="text" name="name" class="main-input" placeholder="Your name">
-          <input type="email" name="email" class="main-input" placeholder="Your email">
-          <textarea name="message" class="main-input" placeholder="Your messege"></textarea>
-          <input type="submit" value="Send message">
-        </form>
-        <div class="info">
-          <h4>Lorem ipsum dolor</h4>
-          <span class="phone">123-4567-890</span>
-          <span class="phone">123-4567-890</span>
-          <h4>Lorem ipsum dolor</h4>
-          <address>
-          <h4>Lorem ipsum </h4>
-          <h4>Lorem ipsum </h4>
-          Awesome Address 17 <br /> Lorem ipsum dolor <br /> 123-4567-890 <br /> USA
-          </address>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer class="footer">
-    <div class="container">
-    <img src="images/logo.png" alt="logo">
-    <p>We Are Social</p>
-    <div class="social-ico">
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-home"></i>
-      <i class="fab fa-linkedin"></i>
-    </div>
-    <p class="cop"> &copy; 2023 <span>Kasper</span> All rights reserved</p>
-    </div>
-  </footer>
+    </footer>
+
 </body>
 </html>

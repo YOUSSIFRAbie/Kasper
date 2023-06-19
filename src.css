@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+
+  @font-face {
+    font-family: 'lato';
+    src: url('../Lato/Lato-Regular.ttf');
+  }
+  body {
+    font-family: 'lato';
+    font-weight: 500;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+}
+@layer components {
+  .container {
+    @apply
+    px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 2xl:px-28
+  }
+  .main-head {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: x-large;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    position: relative;
+  }
+  .main-head + p {
+    text-align: center;
+    width: 100%;
+    padding: 4rem;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .main-head + p {
+      width: 50%;
+    }
+  }
+  .main-head::before, .main-head::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .main-head::before {
+    width: 125px;
+    height: 2px;
+    bottom: -5px;
+    background: #000;
+  }
+  .main-head::after {
+    width: 20px;
+    height: 20px;
+    bottom: -15px;
+    background: #fff;
+    border: 2px solid #000;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+            border-radius: 50%;
+  }
+  .active {
+    color: #00c7fc;
+  }
+  .main-btn {
+    @apply
+    px-4 py-2 inline-block text-white font-bold bg-main-a uppercase
+    cursor-pointer 
+  }
+}
